@@ -12,20 +12,15 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeContentPadding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoAwesome
-import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material3.BottomSheetDefaults
-import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -41,23 +36,16 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import coil3.compose.AsyncImage
 import io.luisferlcc.ulsb.recipeapp.domain.dtos.Prompt
 import io.luisferlcc.ulsb.recipeapp.domain.dtos.RecipeDTO
-import io.luisferlcc.ulsb.recipeapp.domain.models.Recipe
 import io.luisferlcc.ulsb.recipeapp.domain.models.RecipeViewModel
 import io.luisferlcc.ulsb.recipeapp.domain.utils.Preferences
 import io.luisferlcc.ulsb.recipeapp.domain.utils.hideKeyboard
@@ -117,7 +105,6 @@ fun HomeScreen(navController: NavController) {
                 text = "Crea, cocina, comparte y disfruta",
                 color = colors.onSurface,
                 style = MaterialTheme.typography.headlineMedium
-                    .copy(fontWeight = FontWeight.ExtraBold)
             )
 
             Spacer(modifier = Modifier.height(10.dp))
@@ -168,7 +155,6 @@ fun HomeScreen(navController: NavController) {
                 modifier = Modifier
                     .padding(bottom = 10.dp),
                 color = colors.onSurface,
-                fontWeight = FontWeight.ExtraBold,
                 style = MaterialTheme.typography.headlineSmall
             )
 
@@ -273,7 +259,6 @@ fun HomeScreen(navController: NavController) {
                 modifier = Modifier
                     .padding(bottom = 10.dp),
                 color = colors.onSurface,
-                fontWeight = FontWeight.ExtraBold,
                 style = MaterialTheme.typography.headlineSmall
             )
         }

@@ -42,6 +42,7 @@ fun RecipeTheme(
 
     MaterialTheme(
         colorScheme = colors,
+        typography = poppinsTypography(),
         content = content
     )
 }
