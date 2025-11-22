@@ -142,7 +142,6 @@ fun HomeScreen(navController: NavController) {
                             )
                         )
 
-                        viewModel.showSheet = true
                         scope.launch { sheetState.partialExpand() }
                     }
                 )
